@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Input;
 use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostsRequest;
 
 class InputController extends Controller
 {
@@ -32,11 +33,19 @@ class InputController extends Controller
     {
         return view('edit')->with(['input' => $input]);        
     }
-    public function update(PostRequest $request, Input $input)
+    public function update(PostsRequest $request, Input $input)
     {
         $post = $request['diary'];
         $input->fill($post)->save();
-        
         return redirect('/inputs/' . $input->id);
-    }
+        
+    }    
+        
+        
+        
+        
+        
+        
+        
+    
 }
