@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Input extends Model
 {
     protected $dates = [
@@ -22,6 +23,7 @@ class Input extends Model
         'Third_content',
         'Third_impression',
         'Total_impression',
+        'name',
         
     ];
 }

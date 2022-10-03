@@ -17,6 +17,7 @@ class CreateInputsTable extends Migration
             $table->increments('id');
             $table->date('date');
             $table->string('weather',5);
+            $table->string('name',10);
             $table->string('First_class',10);
             $table->string('First_content',20);
             $table->string('First_impression',50);
@@ -28,6 +29,7 @@ class CreateInputsTable extends Migration
             $table->string('Third_impression',50);
             $table->string('Total_impression',200);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

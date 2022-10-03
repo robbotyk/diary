@@ -10,11 +10,11 @@
         .diary{
             margin: 0 auto 0 auto;
             max-width: 910px;
-            height: 1000px;
+            height: 1010px;
             border: 3px solid black;
         }
         .header{
-            height: 130px;
+            height: 140px;
             background-color: skyblue;
         }
         
@@ -183,7 +183,8 @@
                             <p class="weather__errors" style="color:red">{{ $errors->first('diary.weather') }}</p>
                         </div>
                         <div class='username'>
-                            <h2>名前 {{Auth::user()->name}}</h2>
+                            <h2>名前 <input type="text" name="diary[name]" placeholder="名前" value="{{old('diary.name')}}"></h2>
+                            <p class="name__errors" style="color:red">{{ $errors->first('diary.name') }}</p>
                         </div>
                     </div>
                 </div>

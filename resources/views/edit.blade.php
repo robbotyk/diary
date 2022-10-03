@@ -10,12 +10,12 @@
         .diary{
             margin: 0 auto 0 auto;
             max-width: 910px;
-            height: 1000px;
+            height: 1010px;
             border: 3px solid black;
         }
         
         .header{
-            height: 130px;
+            height: 140px;
             background-color: skyblue;    
         }
         
@@ -24,7 +24,6 @@
             margin-top: 20px;
             margin-left: 10px;
             margin-bottom: 0px;
-            font-size: 25px;
         }
         
         .date p{
@@ -61,6 +60,14 @@
         .username h2{
             margin-top: 0px;
         }
+        
+        .weather input{
+            height: 20px;
+            width: 162px;
+            margin-top: 10px;
+            
+        }
+        
         .title{
             height: 70px;
         }
@@ -175,11 +182,12 @@
                     </div>
                     <div class='header-right'>
                         <div class='weather'>
-                            <h2>天気 <input type="text" name="diary[weather]"　placeholder="天気"　value="{{$input->weather}}"></h2>
+                            <h2>天気 <input type="text" name="diary[weather]" placeholder="天気" value="{{$input->weather}}"></h2>
                             <p class="weather__errors" style="color:red">{{ $errors->first('diary.weather') }}</p>
                         </div>
                         <div class='username'>
-                            <h2>名前 {{Auth::user()->name}}</h2>
+                            <h2>名前 <input type="text" name='diary[name]' placeholder="名前" value="{{$input->name}}"></h2>
+                            <p class="name__errors" style="color:red">{{ $errors->first('diary.weather') }}</p>
                         </div>
                     </div>
                 </div>

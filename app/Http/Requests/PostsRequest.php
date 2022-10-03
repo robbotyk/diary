@@ -16,6 +16,7 @@ class PostsRequest extends FormRequest
     {
         return [
             'diary.weather' => 'required|string|max:5',
+            'diary.name' => 'required|string|max:10',
             'diary.First_class' => 'required|string|max:10',
             'diary.First_content' => 'required|string|max:20',
             'diary.First_impression' => 'required|string|max:50',

@@ -39,12 +39,7 @@ class InputController extends Controller
         $input->fill($post)->save();
         return redirect('/inputs/' . $input->id);
         
-    }    
-        
-        
-        
-        
-        
+    }
         
         
     

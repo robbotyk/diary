@@ -5,8 +5,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>日誌</title>
-        
+        <title>日誌</title
     </head>
     <body>
         <h1>カレンダー</h1>

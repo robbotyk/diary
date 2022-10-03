@@ -149,6 +149,7 @@ return [
     'attributes' => [
             'diary.date' => '日付',
             'diary.weather' => '天気',
+            'diary.Username' => '名前',
             'diary.First_class' => '教科',
             'diary.First_content' => '内容',
             'diary.First_impression' => '所感',

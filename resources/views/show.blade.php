@@ -8,12 +8,12 @@
         .diary{
             margin: 0 auto 0 auto;
             max-width: 910px;
-            height: 1000px;
+            height: 1010px;
             border: 3px solid black;
         }
         
         .header{
-            height: 130px;
+            height: 140px;
             background-color: skyblue;    
         }
         
@@ -140,7 +140,7 @@
                         <h2>天気 {{$input->weather}}</h2>
                     </div>
                     <div class='username'>
-                        <h2>名前{{Auth::user()->name}}</h2>
+                        <h2>名前 {{$input->name}}</h2>
                     </div>
                 </div>
             </div>
