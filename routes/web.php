@@ -16,8 +16,9 @@
         Route::get('/inputs/create', 'InputController@create');
         Route::get('/inputs/{input}/edit', 'InputController@edit');
         Route::put('/inputs/{input}', 'InputController@update');
+        Route::delete('/inputs/{input}', 'InputController@delete');
         Route::get('/inputs/{input}', 'InputController@show');
-        Route::post('/inputs', 'InputController@store');    
+        Route::post('/inputs', 'InputController@store');   
     });
 
     

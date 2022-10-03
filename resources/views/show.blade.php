@@ -119,14 +119,32 @@
             float: right;
         }
         
-        .back{
+        .footer-left{
             float: left;
         }
         
+        .footer-right{
+            float: right;
+        }
+        
+        p{
+            margin: 0px;
+        }
+        span{
+            margin-right: 10px;
+            
+        }
+        
+        .back{
+            float: left;
+            margin-right: 10px;
+        }
+        
+        
         .edit{
             float: right;
-            margin-left: 10px;
         }
+        
         
     </style>
     <body>
@@ -204,13 +222,30 @@
                 
             </div>
             
-            <div class=footer>
-                <div class="back"><a href="/" >戻る</a></div>
-                <div class="edit"><a href="/inputs/{{$input->id}}/edit">編集</a></div>
+            <div class='footer'>
+                <div class='footer-left'>
+                    <form action="/inputs/{{ $input->id}}" id="form_delete" method="post">
+                        {{ csrf_field() }}
+                        {{ method_field('delete')}}
+                        <input type="submit" style="display:none">
+                        <p class='delete'><span onclick="return deletePost(this);">削除</span></p>
+                    </form>
+                </div>
+                <div class='footer-right'>
+                    <div class="back"><a href="/" >戻る</a></div>
+                    <div class="edit"><a href="/inputs/{{$input->id}}/edit">編集</a></div>
+                </div>
             </div>
             
         </div>
-       
+        <script>
+        function deletePost(e){
+            "use strict";
+            if(confirm('本当に削除してもよろしいですか？')) {
+                document.getElementById('form_delete').submit();
+            }
+        }
+        </script>
         
     </body>
 </html>

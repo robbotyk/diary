@@ -41,6 +41,10 @@ class InputController extends Controller
         
     }
         
-        
+    public function delete(Input $input)
+    {
+        $input->delete();
+        return redirect('/');
+    } 
     
 }
