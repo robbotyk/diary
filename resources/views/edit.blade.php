@@ -12,6 +12,7 @@
             max-width: 910px;
             height: 1010px;
             border: 3px solid black;
+            background-color: azure;
         }
         
         .header{
